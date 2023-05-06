@@ -13,7 +13,7 @@ public class PanelEntradaDatos extends JPanel
     //----------------------
     // Atributos
     //----------------------
-    private JLabel lbSalones;
+    private JLabel lbOperadores;
     private JComboBox<String> cbOperadores;
 
     private JLabel lbNumeroCelular;
@@ -35,17 +35,17 @@ public class PanelEntradaDatos extends JPanel
         this.setBackground(Color.WHITE);
 
         //Crear y agregar etiqueta Operadores
-        lbSalones = new JLabel("Operadores : ", JLabel.RIGHT);
-        lbSalones.setBounds(0,55,100,20);
-        this.add(lbSalones);
+        lbOperadores = new JLabel("Operadores : ", JLabel.RIGHT);
+        lbOperadores.setBounds(0,55,100,20);
+        this.add(lbOperadores);
 
-        //Crear y agregar combo lista operadores (claro, movistar, tigo, Wim)
+        //Crear y agregar combo lista operadores (claro, movistar, tigo, Wom)
         cbOperadores = new JComboBox<String>();
         cbOperadores.setBounds(150,55,100,20);
         cbOperadores.addItem("Claro");
         cbOperadores.addItem("Movistar");
         cbOperadores.addItem("Tigo");
-        cbOperadores.addItem("Wim");
+        cbOperadores.addItem("Wom");
         this.add(cbOperadores);
         
         //Borde y titulo del panel
@@ -82,37 +82,70 @@ public class PanelEntradaDatos extends JPanel
         lbCostoPlan.setBounds(20, 155, 140, 20);
         this.add(lbCostoPlan);
 
+        //Crear y agregar campo de texto, estará deshabilitado
         tfCostoPlan = new JTextField();
         tfCostoPlan.setBounds(150, 155, 100, 25);
+        tfCostoPlan.setEnabled(false);
         this.add(tfCostoPlan);
 
 
-        
-
-
-        
     }
 
     //Metodos de acceso
-    public String getSalon()
+
+    public String getTxtOperadores()
     {
-        return (String) cbSalones.getSelectedItem();
+        return (String) cbOperadores.getSelectedItem();
     }
 
-    public int getIndexSalon()
+    public void setTxtOperadores(String sal)
     {
-        return cbSalones.getSelectedIndex();
+        cbOperadores.addItem(sal);
     }
 
-    public void setSalon(String sal)
+    public void setIndexOperadores(int index)
     {
-        cbSalones.addItem(sal);
+        cbOperadores.setSelectedIndex(index);
     }
 
-    //get personas
-    public int getPersonas()
+    public String getTxtNumeroCelular()
     {
-        return Integer.parseInt(cbSalones.getSelectedItem().toString());
+        return tfNumeroCelular.getText();
+    }
+
+    public void setTxtNumeroCelular(String numeroCelular)
+    {
+        tfNumeroCelular.setText(numeroCelular);
+    }
+
+    public String getTxtCantidadMinuto()
+    {
+        return tfCantidadMinuto.getText();
+    }
+
+    public void setTxtCantidadMinuto(String cantidadMinuto)
+    {
+        tfCantidadMinuto.setText(cantidadMinuto);
+    }
+
+    public String getTxtValorMinuto()
+    {
+        return tfvalorMinuto.getText();
+    }
+
+    public void setTxtValorMinuto(String valorMinuto)
+    {
+        tfvalorMinuto.setText(valorMinuto);
+    }
+
+    public String getTxtCostoPlan()
+    {
+        return tfCostoPlan.getText();
+    }
+
+    public void setTxtCostoPlan(String costoPlan)
+    {
+        tfCostoPlan.setText(costoPlan);
     }
 
 }

@@ -27,7 +27,10 @@ public class PlanTelefonia
         operador = pOperador;
         cantidadMinuto = pCantidadMinuto;
         valorMinuto = pValorMinuto;
+        costoPlan = 0;
     }
+
+
     
     public int getNumeroCelular()
     {
@@ -81,36 +84,21 @@ public class PlanTelefonia
 
 
 
-    ////Calcular el número de meseros
-    //public int calcularMeseros()
-    //{
-    //    if(personas < 50)
-    //    {
-    //        return 1;
-    //    }
-    //    else if(personas >= 50 && personas <= 100)
-    //    {
-    //        return 2;
-    //    }
-    //    else
-    //    {
-    //        return 3;
-    //    }
-    //}
+    //Calcular el costo del plan teniendo en cuenta que si el operador es "Wom" tiene un 50% de descuento, la cantidad de minutos y el valor del minuto, y guardar los datos del panel entrada de datos en la lista de planes incluyendo tambine el costo del plan
+    public void calcularCostoPlan()
+    {
+        if(operador.equals("Wom"))
+        {
+            costoPlan = (cantidadMinuto * valorMinuto) * 0.5;
+        }
+        else
+        {
+            costoPlan = cantidadMinuto * valorMinuto;
+        }
+    }
 
-    ////Calcular el costo del salon 
-    //public double calcularCostoSalon()
-    //{
-    //    if(personas <= 50)
-    //    {
-    //        costoSalon = 1000000 + (1000000 * 0.2);
-    //    }
-    //    else
-    //    {
-    //        costoSalon = 1000000 + (1000000 * 0.4);
-    //    }
-    //    return costoSalon;
-    //}
+
+    
 
     
 

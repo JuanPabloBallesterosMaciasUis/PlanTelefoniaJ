@@ -24,17 +24,17 @@ public class VentanaPrincipal extends JFrame
 
         //Creación y adición del PanelEntradaDatos
         miPanelEntradaDatos = new PanelEntradaDatos();
-        miPanelEntradaDatos.setBounds(10,10,380,190);
+        miPanelEntradaDatos.setBounds(10,10,370,190);
         this.add(miPanelEntradaDatos);
 
         //Creación y adición del PanelOperaciones
         miPanelOperaciones = new PanelOperaciones();
-        miPanelOperaciones.setBounds(10,210,380,120);
+        miPanelOperaciones.setBounds(10,210,370,150);
         this.add(miPanelOperaciones);
 
         //Creación y adición del PanelResultados
         miPanelResultados = new PanelResultados();
-        miPanelResultados.setBounds(10,340,380,180);
+        miPanelResultados.setBounds(10,370,380,180);
         this.add(miPanelResultados);
 
         //Caracteristicas de la ventana

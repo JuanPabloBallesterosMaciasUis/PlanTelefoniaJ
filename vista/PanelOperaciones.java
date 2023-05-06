@@ -12,10 +12,11 @@ public class PanelOperaciones extends JPanel
     //----------------------
     // Atributos
     //----------------------
-    private JButton btAgregarSalon;
+    private JButton btCalcularAgregarPlan;
     private JButton btSalir;
-    private JButton btCostoTotal;
-    private JButton btMeseros;
+   
+    private JButton btEleminar;
+;
     //----------------------
     // Metodos
     //----------------------
@@ -28,23 +29,23 @@ public class PanelOperaciones extends JPanel
         this.setBackground(Color.WHITE);
 
         //Crear y agregar boton Agregar plan
-        btAgregarSalon = new JButton("Agregar plan");
-        btAgregarSalon.setBounds(90,20,210,20);
-        btAgregarSalon.setActionCommand("agregarSalon");
-        this.add(btAgregarSalon);
+        btCalcularAgregarPlan = new JButton("Calcular costo y guardar");
+        btCalcularAgregarPlan.setBounds(90,20,210,20);
+        btCalcularAgregarPlan.setActionCommand("costo");
+        this.add(btCalcularAgregarPlan);
 
-        //Crear y agregar boton costo del plan
-        btMeseros = new JButton("Calcular costo del plan");
-        btMeseros.setBounds(90,50,210,20);
-        btMeseros.setActionCommand("costoPlan");
-        this.add(btMeseros);
+        //Crear y agregar boton Eleminar
+        btEleminar = new JButton("Eliminar");
+        btEleminar.setBounds(90,50,210,20);
+        btEleminar.setActionCommand("eliminar");
+        this.add(btEleminar);
 
         //Crear y agregar boton Salir
         btSalir = new JButton("Salir");
-        btSalir.setBounds(90,80,210,20); 
+        btSalir.setBounds(90,80,210,20);
         btSalir.setActionCommand("salir");
         this.add(btSalir);
-
+    
 
         //Borde y titulo del panel
         TitledBorder borde = BorderFactory.createTitledBorder("Operaciones");
@@ -54,10 +55,10 @@ public class PanelOperaciones extends JPanel
 
     public void agregarOyentesBotones(ActionListener pAL)
     {
-        btAgregarSalon.addActionListener(pAL);
-        btCostoTotal.addActionListener(pAL);
+        btCalcularAgregarPlan.addActionListener(pAL);
+        btEleminar.addActionListener(pAL);
         btSalir.addActionListener(pAL);
-        btMeseros.addActionListener(pAL);
+  
     }
 
 
