@@ -37,7 +37,7 @@ public class Controlador implements ActionListener
         //Abrir ventana Agregar Salon
         if(comando.equals("agregarSalon"))
         {
-            venPrin.crearDialogoAgregarVendedor();
+            venPrin.crearDialogoAgregarPlan();
             this.venPrin.miDialogoAgregarSalon.agregarOyenteBoton(this);
         }
 

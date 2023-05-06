@@ -10,7 +10,7 @@ public class VentanaPrincipal extends JFrame
     public PanelEntradaDatos miPanelEntradaDatos;
     public PanelOperaciones miPanelOperaciones;
     public PanelResultados miPanelResultados;
-    public DialogoAgregarSalon miDialogoAgregarSalon = null;
+    public DialogoAgregarPlan miDialogoAgregarSalon = null;
     
     //----------------------
     // Metodos
@@ -24,21 +24,21 @@ public class VentanaPrincipal extends JFrame
 
         //Creación y adición del PanelEntradaDatos
         miPanelEntradaDatos = new PanelEntradaDatos();
-        miPanelEntradaDatos.setBounds(10,10,380,160);
+        miPanelEntradaDatos.setBounds(10,10,380,190);
         this.add(miPanelEntradaDatos);
 
         //Creación y adición del PanelOperaciones
         miPanelOperaciones = new PanelOperaciones();
-        miPanelOperaciones.setBounds(10,190,380,170);
+        miPanelOperaciones.setBounds(10,210,380,120);
         this.add(miPanelOperaciones);
 
         //Creación y adición del PanelResultados
         miPanelResultados = new PanelResultados();
-        miPanelResultados.setBounds(10,370,380,180);
+        miPanelResultados.setBounds(10,340,380,180);
         this.add(miPanelResultados);
 
         //Caracteristicas de la ventana
-        this.setTitle("Empresa Automotriz");
+        this.setTitle("Planes de telefonia");
         this.setSize(400,600);
         this.setLocationRelativeTo(null);
         this.setDefaultCloseOperation(EXIT_ON_CLOSE);
@@ -46,10 +46,10 @@ public class VentanaPrincipal extends JFrame
         this.setVisible(true);
     }
 
-    //Crear Dialogo AgregarVendedor
-    public void crearDialogoAgregarVendedor()
+    //Crear Dialogo Agregar Salon
+    public void crearDialogoAgregarPlan()
     {
-        miDialogoAgregarSalon = new DialogoAgregarSalon();
+        miDialogoAgregarSalon = new DialogoAgregarPlan();
     }
 
 }

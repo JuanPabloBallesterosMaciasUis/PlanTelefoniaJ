@@ -27,27 +27,21 @@ public class PanelOperaciones extends JPanel
         this.setLayout(null);
         this.setBackground(Color.WHITE);
 
-        //Crear y agregar boton Agregar salón
-        btAgregarSalon = new JButton("Agregar Salón");
+        //Crear y agregar boton Agregar plan
+        btAgregarSalon = new JButton("Agregar plan");
         btAgregarSalon.setBounds(90,20,210,20);
         btAgregarSalon.setActionCommand("agregarSalon");
         this.add(btAgregarSalon);
 
-        //Crear y agregar boton  para calcular los meseros y el costo del salon
-        btMeseros = new JButton("Calcular meseros y costo");
+        //Crear y agregar boton costo del plan
+        btMeseros = new JButton("Calcular costo del plan");
         btMeseros.setBounds(90,50,210,20);
-        btMeseros.setActionCommand("meseros");
+        btMeseros.setActionCommand("costoPlan");
         this.add(btMeseros);
-
-        //Crear y agregar boton para calcular el costo total
-        btCostoTotal = new JButton("Calcular costo total");
-        btCostoTotal.setBounds(90,80,210,20); 
-        btCostoTotal.setActionCommand("ventas");
-        this.add(btCostoTotal);
 
         //Crear y agregar boton Salir
         btSalir = new JButton("Salir");
-        btSalir.setBounds(90,110,210,20); 
+        btSalir.setBounds(90,80,210,20); 
         btSalir.setActionCommand("salir");
         this.add(btSalir);
 
